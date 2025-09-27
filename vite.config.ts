@@ -21,9 +21,9 @@ export default defineConfig(({ mode }) => {
         // Your existing path alias
         '@': path.resolve(__dirname, '.'),
         
-        // CRITICAL FIX: Explicitly tells Rollup where the main entry point is for 'pdfjs-dist'
-        // This resolves the "Rollup failed to resolve import..." error for the main library.
-        'pdfjs-dist': 'pdfjs-dist/build/pdf.js',
+        // REMOVED: The root 'pdfjs-dist' alias, as it was corrupting the worker path.
+        // The App.tsx file already explicitly imports the necessary files, 
+        // so this alias is redundant and harmful.
         
         // Existing FIX: Alias the .mjs worker path to the correct .js file during resolve
         'pdfjs-dist/build/pdf.worker.min.mjs': 'pdfjs-dist/build/pdf.worker.min.js',
