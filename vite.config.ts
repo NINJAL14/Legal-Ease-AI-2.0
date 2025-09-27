@@ -21,10 +21,6 @@ export default defineConfig(({ mode }) => {
         // Your existing path alias
         '@': path.resolve(__dirname, '.'),
         
-        // REMOVED: The root 'pdfjs-dist' alias, as it was corrupting the worker path.
-        // The App.tsx file already explicitly imports the necessary files, 
-        // so this alias is redundant and harmful.
-        
         // Existing FIX: Alias the .mjs worker path to the correct .js file during resolve
         'pdfjs-dist/build/pdf.worker.min.mjs': 'pdfjs-dist/build/pdf.worker.min.js',
       },
@@ -44,5 +40,11 @@ export default defineConfig(({ mode }) => {
         },
       },
     },
+    // CRITICAL FIX: Explicitly list pdfjs-dist to be pre-bundled as a CommonJS dependency.
+    // This often resolves hard-to-debug Rollup import issues in production builds.
+    optimizeDeps: {
+        include: ['pdfjs-dist/build/pdf.js'],
+    },
   };
 });
+
