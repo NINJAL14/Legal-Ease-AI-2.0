@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
-import * as pdfjsLib from 'pdfjs-dist';
-// Import the worker source path directly from the installed package
+// FIX: Change import from 'pdfjs-dist' to 'pdfjs-dist/build/pdf' for Rollup/Vite compatibility
+import * as pdfjsLib from 'pdfjs-dist/build/pdf';
 import pdfjsWorker from 'pdfjs-dist/build/pdf.worker.min.mjs?url';
 
 import { Header } from './components/Header';
@@ -13,7 +13,7 @@ import { MessageSender } from './types';
 import { analyzeContract, answerQuestion, ocrPdf } from './services/geminiService';
 
 // Configure the PDF.js worker to enable text extraction using the imported URL
-// This resolves the Rollup import error by correctly bundling the worker script path.
+// This is necessary for Vite/Rollup to correctly handle the worker as an asset.
 pdfjsLib.GlobalWorkerOptions.workerSrc = pdfjsWorker;
 
 /**
