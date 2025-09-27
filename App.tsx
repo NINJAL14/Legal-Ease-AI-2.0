@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
-// FIX: Change import from 'pdfjs-dist' to 'pdfjs-dist/build/pdf' for Rollup/Vite compatibility
-import * as pdfjsLib from 'pdfjs-dist/build/pdf';
+// FIX: Change import from 'pdfjs-dist/build/pdf' to 'pdfjs-dist/build/pdf.mjs' for ES module resolution
+import * as pdfjsLib from 'pdfjs-dist/build/pdf.mjs';
 import pdfjsWorker from 'pdfjs-dist/build/pdf.worker.min.mjs?url';
 
 import { Header } from './components/Header';
