@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-// CRITICAL FIX: Reverting to the specific CommonJS path. This path, along with 
-// the correct worker setup in vite.config.ts, is the most robust solution.
-import * as pdfjsLib from 'pdfjs-dist/build/pdf.js'; 
+// CRITICAL FIX: Reverting to the standard bare package name.
+// This MUST be paired with the final alias fix in vite.config.ts (see below).
+import * as pdfjsLib from 'pdfjs-dist'; 
 // The worker import remains specific and uses the ?url convention for Vite asset handling
 import pdfjsWorker from 'pdfjs-dist/build/pdf.worker.min.mjs?url';
 
