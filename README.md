@@ -1,2 +1,20 @@
-# Legal-Ease-AI-2.0
-Legal Ease AI simplifies legal contracts by turning complex PDFs into plain-language summaries, highlighting key clauses, and enabling Q&amp;A with citations. Multilingual, affordable, and AI-powered, it makes law accessible for individuals, startups, NGOs, and communities.
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+</div>
+
+# Run and deploy your AI Studio app
+
+This contains everything you need to run your app locally.
+
+View your app in AI Studio: https://ai.studio/apps/drive/1zRduMzqa6if8nu8hnhykoho-rkZGWg_q
+
+## Run Locally
+
+**Prerequisites:**  Node.js
+
+
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`

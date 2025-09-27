@@ -1,0 +1,5 @@
+{
+  "name": "Legal Ease AI",
+  "description": "An AI-powered legal assistant that simplifies complex contracts. Upload a PDF, and the AI provides a simplified summary, identifies key clauses and potential risks, and answers your questions in plain language with multilingual support.",
+  "requestFramePermissions": []
+}
