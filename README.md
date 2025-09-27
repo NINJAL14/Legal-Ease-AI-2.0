@@ -1,20 +1,65 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+🏛️ Legal Ease AI
 
-# Run and deploy your AI Studio app
+Making Law Accessible for Everyone
 
-This contains everything you need to run your app locally.
+Legal Ease AI is a web application built for Smart India Hackathon 2025 under the theme Smart Automation. It helps people understand complex legal contracts by converting them into plain language summaries, highlighting key clauses, and enabling Q&A with citations — making law affordable and accessible for individuals, startups, and communities.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1zRduMzqa6if8nu8hnhykoho-rkZGWg_q
+🚀 Features
 
-## Run Locally
+📄 Contract Upload – Upload PDF contracts for instant analysis.
 
-**Prerequisites:**  Node.js
+📝 Simplified Summary – AI-generated plain-language explanation of legal text.
 
+⚖️ Key Clauses Detection – Highlights risky/legal terms like liability, penalty, termination.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+💬 Interactive Chatbot – Ask questions about the contract and get answers with citations.
+
+🌐 Multilingual Support – English, Hindi, Marathi (extensible to more languages).
+
+📑 Downloadable Report – Save contract analysis with flagged risks.
+
+🔒 Disclaimer – Built-in legal disclaimer & lawyer referral for complex queries.
+
+🛠️ How It Works
+
+Upload PDF Contract → Extract text.
+
+Embedding + RAG Pipeline → Convert text into embeddings & retrieve relevant sections.
+
+AI Model (LLM) → Summarize, simplify, and answer queries.
+
+Frontend (React + Tailwind) → Clean, responsive UI with summary, clauses, and chat interface.
+
+Backend (FastAPI / Node.js) → Handles PDF parsing, embeddings, RAG pipeline, and API responses.
+
+Database → Stores user data and embeddings (FAISS/Chroma + PostgreSQL).
+
+💡 Use Cases
+
+🏠 Individuals: Understand contracts before signing.
+
+🚀 Startups & SMEs: Quick contract review without expensive lawyers.
+
+🧑‍⚖️ Lawyers & Paralegals: Automate first-level contract scanning.
+
+🏛️ Government & NGOs: Legal literacy drives & legal aid centers.
+
+🏗️ Tech Stack
+
+Frontend: React, TailwindCSS, shadcn/ui
+
+Backend: FastAPI (Python) / Node.js
+
+AI: LangChain, OpenAI/Hugging Face models
+
+Database: PostgreSQL + FAISS/Chroma (vector DB)
+
+Deployment: Docker, Vercel/Netlify (frontend), AWS/GCP/Render (backend)
+
+📌 Project Status
+
+✅ Prototype ready (PDF upload, summary, key clauses, chatbot) 🚧 Improvements ongoing: UI aesthetics, mobile responsiveness, multilingual extension
+
+⚠️ Disclaimer
+
+This app is for educational and informational purposes only. It does not replace professional legal advice. For complex matters, please consult a licensed lawyer.
